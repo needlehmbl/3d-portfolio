@@ -68,7 +68,7 @@ const abilities = [
     desc: "Ensuring project success through clear communication and a collaborative approach to overcome challenges and align with stakeholder goals.",
   },
   {
-    imgPath: "/images/time.png",
+    imgPath: "./images/time.png",
     title: "Results-Oriented Delivery",
     desc: "A proven track record of delivering projects on schedule, translating strategic objectives into tangible results without sacrificing quality.",
   },
@@ -173,7 +173,7 @@ const socialImgs = [
   {
     name: "fb",
     url:"https://www.facebook.com/Ernest",
-    imgPath: "/images/fb.png",
+    imgPath: "./images/fb.png",
   },
   {
     name: "linkedin",
