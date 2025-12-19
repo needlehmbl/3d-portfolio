@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function Desktop(props) {
-  const { nodes, materials } = useGLTF('/models/90s_stylized_office.glb')
+  const { nodes, materials } = useGLTF('./models/90s_stylized_office.glb')
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -41,4 +41,4 @@ export function Desktop(props) {
   )
 }
 
-useGLTF.preload('/models/90s_stylized_office.glb')
+useGLTF.preload('./models/90s_stylized_office.glb')

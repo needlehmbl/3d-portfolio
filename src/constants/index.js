@@ -37,33 +37,33 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    imgPath: "./images/logos/company-logo-1.png",
   },
   {
-    imgPath: "/images/logos/company-logo-2.png",
+    imgPath: "./images/logos/company-logo-2.png",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
+    imgPath: "./images/logos/company-logo-3.png",
   },
   {
-    imgPath: "/images/logos/company-logo-4.png",
+    imgPath: "./images/logos/company-logo-4.png",
   },
   {
-    imgPath: "/images/logos/company-logo-5.png",
+    imgPath: "./images/logos/company-logo-5.png",
   },
   {
-    imgPath: "/images/logos/company-logo-6.png",
+    imgPath: "./images/logos/company-logo-6.png",
   },
 ];
 
 const abilities = [
   {
-    imgPath: "/images/seo.png",
+    imgPath: "./images/seo.png",
     title: "Quality-Driven Development",
     desc: "Delivering robust, scalable, and high-performance applications by prioritizing quality and meticulous attention to detail.",
   },
   {
-    imgPath: "/images/chat.png",
+    imgPath: "./images/chat.png",
     title: "Collaborative Problem-Solving",
     desc: "Ensuring project success through clear communication and a collaborative approach to overcome challenges and align with stakeholder goals.",
   },
@@ -100,31 +100,31 @@ const techStackImgs = [
 const techStackIcons = [
   {
     name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
+    modelPath: "./models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
     name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
+    modelPath: "./models/python-transformed.glb",
     scale: 0.8,
     rotation: [0, 0, 0],
   },
   {
     name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
+    modelPath: "./models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
     name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
+    modelPath: "./models/three.js-transformed.glb",
     scale: 0.05,
     rotation: [0, 0, 0],
   },
   {
     name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
+    modelPath: "./models/git-svg-transformed.glb",
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
   },
@@ -178,7 +178,7 @@ const socialImgs = [
   {
     name: "linkedin",
     url:"https://www.linkedin.com/in/ernest-4494a4393/",
-    imgPath: "/images/linkedin.png",
+    imgPath: "./images/linkedin.png",
   },
 ];
 

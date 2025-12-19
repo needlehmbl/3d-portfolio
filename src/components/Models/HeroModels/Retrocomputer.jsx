@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function RetroPC(props) {
-  const { nodes, materials } = useGLTF('/models/retrocomputer.glb')
+  const { nodes, materials } = useGLTF('./models/retrocomputer.glb')
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -19,4 +19,4 @@ export function RetroPC(props) {
   )
 }
 
-useGLTF.preload('/models/retrocomputer.glb')
+useGLTF.preload('./models/retrocomputer.glb')
