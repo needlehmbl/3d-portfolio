@@ -3,18 +3,18 @@ const navLinks = [
     name: "Projects",
     link: "#work",
   },
-//   {
-//     name: "Experience",
-//     link: "#experience", TODO: UNCOMMENT WHEN EXPERIENCE SECTION IS READY
-//   },
+  //   {
+  //     name: "Experience",
+  //     link: "#experience", TODO: UNCOMMENT WHEN EXPERIENCE SECTION IS READY
+  //   },
   {
     name: "Skills",
     link: "#skills",
   },
-//   {
-//     name: "Testimonials",
-//     link: "#testimonials",
-//   },
+  //   {
+  //     name: "Testimonials",
+  //     link: "#testimonials",
+  //   },
 ];
 
 const words = [
@@ -32,7 +32,7 @@ const counterItems = [
   { value: 1, suffix: "+", label: "Year of Experience" },
   { value: 15, suffix: "+", label: "Satisfied Clients" },
   { value: 50, suffix: "+", label: "Completed Projects" },
-  { value: 1.3, suffix: "", label: "General Weighted Average" },
+  { value: 1.38, suffix: "", label: "General Weighted Average" },
 ];
 
 const logoIconsList = [
@@ -53,6 +53,12 @@ const logoIconsList = [
   },
   {
     imgPath: "./images/logos/company-logo-6.png",
+  },
+  {
+    imgPath: "./images/logos/company-logo-7.png",
+  },
+  {
+    imgPath: "./images/logos/company-logo-8.png",
   },
 ];
 
@@ -169,15 +175,14 @@ const techStackIcons = [
 // ];
 
 const socialImgs = [
-
   {
     name: "fb",
-    url:"https://www.facebook.com/Ernest",
+    url: "https://www.facebook.com/Ernest",
     imgPath: "./images/fb.png",
   },
   {
     name: "linkedin",
-    url:"https://www.linkedin.com/in/ernest-4494a4393/",
+    url: "https://www.linkedin.com/in/ernest-4494a4393/",
     imgPath: "./images/linkedin.png",
   },
 ];
@@ -187,9 +192,9 @@ export {
   abilities,
   logoIconsList,
   counterItems,
-//   expCards,
-//   expLogos,
-//   testimonials,
+  //   expCards,
+  //   expLogos,
+  //   testimonials,
   socialImgs,
   techStackIcons,
   techStackImgs,
