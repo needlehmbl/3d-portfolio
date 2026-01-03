@@ -60,7 +60,7 @@ const ShowCaseSection = () => {
             </div>
             <div className="text-content">
               <h2>
-                Glowpoint Dashboard: Appointments and Queuing Management Made
+                <span className="hover:underline"><a href="https://github.com/Needleeeeeeee/glowpoint-dashboard">Glowpoint Dashboard</a></span>: Appointments and Queuing Management Made
                 Simple
               </h2>
               <p className="text-white-50 md:text-xl">
@@ -78,7 +78,7 @@ const ShowCaseSection = () => {
               </div>
               <div className="text-content">
                 <h2>
-                  Glowpoint.org: Booking Beauty Lounge Services with
+                  <span className="hover:underline"><a href="https://glowpoint.org">Glowpoint.org</a></span>: Booking Beauty Lounge Services with
                   Elegance
                 </h2>
               </div>
@@ -89,7 +89,7 @@ const ShowCaseSection = () => {
                 <img src="./images/project3.png" alt="GoGoGhost" />
               </div>
               <div className="text-content">
-                <h2>GoGoGhost: GODOT 2D Pixel Puzzle-Platformer Game</h2>
+                <h2> <span className="hover:underline"><a href="https://github.com/Needleeeeeeee/go-go-ghost">GoGoGhost</a></span>: GODOT 2D Pixel Puzzle-Platformer Game</h2>
               </div>
             </div>
           </div>
