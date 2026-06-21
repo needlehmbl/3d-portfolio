@@ -64,8 +64,8 @@ const ShowCaseSection = () => {
                 Simple
               </h2>
               <p className="text-white-50 md:text-xl">
-                A web application built with NEXT.js, ShadCN, and Tailwind CSS
-                to manage beauty lounge appointments & queuing.
+                A full-stack web application built with NEXT.js, ShadCN, and Tailwind CSS
+                to manage beauty lounge appointments & queuing with email/SMS notifications for the customers.
               </p>
             </div>
           </div>

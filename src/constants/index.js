@@ -29,11 +29,24 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 1, suffix: "+", label: "Year of Experience" },
-  { value: 15, suffix: "+", label: "Satisfied Clients" },
-  { value: 50, suffix: "+", label: "Completed Projects" },
+  { value: 1, suffix: "", label: "Years of Experience" },
   { value: 1.38, suffix: "", label: "General Weighted Average" },
 ];
+
+const credentials = {
+  text: "Certified across modern web development tools and frameworks.",
+  certificates: [
+    {
+      name: "SAP S/4HANA Cloud - Application Development Associate",
+      imgPath: "./images/certificates/cert-1.jpg",
+    },
+    {
+      name: "Ollopa Corporation - Certificate of Completion: Internship Program",
+      imgPath: "./images/certificates/cert-2.jpg",
+    },
+    // add maybe
+  ],
+};
 
 const logoIconsList = [
   {
@@ -49,9 +62,6 @@ const logoIconsList = [
     imgPath: "./images/logos/company-logo-4.png",
   },
   {
-    imgPath: "./images/logos/company-logo-5.png",
-  },
-  {
     imgPath: "./images/logos/company-logo-6.png",
   },
   {
@@ -59,6 +69,9 @@ const logoIconsList = [
   },
   {
     imgPath: "./images/logos/company-logo-8.png",
+  },
+  {
+    imgPath: "./images/logos/company-logo-9.png",
   },
 ];
 
@@ -196,6 +209,7 @@ export {
   //   expLogos,
   //   testimonials,
   socialImgs,
+  credentials,
   techStackIcons,
   techStackImgs,
   navLinks,
