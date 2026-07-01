@@ -30,7 +30,7 @@ const words = [
 
 const counterItems = [
   { value: 1, suffix: "", label: "Years of Experience" },
-  { value: 1.38, suffix: "", label: "General Weighted Average" },
+  { value: 1.36, suffix: "", label: "General Weighted Average" },
 ];
 
 const credentials = {
@@ -44,7 +44,7 @@ const credentials = {
       name: "Ollopa Corporation - Certificate of Completion: Internship Program",
       imgPath: "./images/certificates/cert-2.jpg",
     },
-    // add maybe
+    // add diploma when collected at the top
   ],
 };
 
