@@ -1,25 +1,29 @@
-import LogoSection from "./components/LogoSection";
+import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
-import Contact from "./sections/Contact";
-import FeatureCards from "./sections/FeatureCards";
-import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
-import MoreProjects from "./sections/MoreProjects";
-import ShowCaseSection from "./sections/ShowCaseSection";
-import TechStack from "./sections/TechStack";
+
+const ShowCaseSection = lazy(() => import("./sections/ShowCaseSection"));
+const MoreProjects = lazy(() => import("./sections/MoreProjects"));
+const LogoSection = lazy(() => import("./components/LogoSection"));
+const FeatureCards = lazy(() => import("./sections/FeatureCards"));
+const TechStack = lazy(() => import("./sections/TechStack"));
+const Contact = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./sections/Footer"));
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Hero />
-      <ShowCaseSection/>
-      <MoreProjects />
-      <LogoSection/>
-      <FeatureCards/>
-      <TechStack/>
-      <Contact/>
-      <Footer/>
+      <Suspense fallback={null}>
+        <ShowCaseSection />
+        <MoreProjects />
+        <LogoSection />
+        <FeatureCards />
+        <TechStack />
+        <Contact />
+        <Footer />
+      </Suspense>
     </>
   );
 };

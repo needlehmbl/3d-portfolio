@@ -39,10 +39,14 @@ const credentials = {
     {
       name: "SAP S/4HANA Cloud - Application Development Associate",
       imgPath: "./images/certificates/cert-1.jpg",
+      width: 2480,
+      height: 3509,
     },
     {
       name: "Ollopa Corporation - Certificate of Completion: Internship Program",
       imgPath: "./images/certificates/cert-2.jpg",
+      width: 3300,
+      height: 2550,
     },
     // add diploma when collected at the top
   ],

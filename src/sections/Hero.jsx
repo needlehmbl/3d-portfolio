@@ -1,9 +1,13 @@
+import { lazy, Suspense } from "react";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
 import Button from "../components/Button.jsx";
-import HeroExperience from "../components/Models/HeroModels/HeroExperience.jsx";
 import { words } from "../constants/index.js";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+
+const HeroExperience = lazy(() =>
+  import("../components/Models/HeroModels/HeroExperience.jsx"),
+);
 
 const Hero = () => {
 
@@ -24,7 +28,14 @@ const Hero = () => {
   return (
     <section id="hero" className="relative">
       <div className="absolute top-0 left-0 z-10">
-        <img src="./images/bg.png" alt="Hero Background" />
+        <img
+          src="./images/bg.png"
+          alt="Hero Background"
+          width="418"
+          height="327"
+          fetchpriority="high"
+          decoding="async"
+        />
       </div>
 
       <div className="hero-layout">
@@ -44,6 +55,8 @@ const Hero = () => {
                         <img
                           src={word.imgPath}
                           alt={word.text}
+                          width="40"
+                          height="40"
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
                         <span>{word.text}</span>
@@ -70,7 +83,9 @@ const Hero = () => {
         {/* Right - 3D Model */}
         <figure>
           <div className="hero-3d-layout">
-            <HeroExperience />
+            <Suspense fallback={null}>
+              <HeroExperience />
+            </Suspense>
           </div>
         </figure>
       </div>

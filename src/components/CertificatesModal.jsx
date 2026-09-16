@@ -1,43 +1,64 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 4;
 const ZOOM_STEP = 0.5;
 
-const CertificatesModal = ({ isOpen, onClose, certificates = [] }) => {
+function toFormat(src, ext) {
+  return src.replace(/\.\w+$/, ext);
+}
+
+function warmImageCache(src) {
+  const img = new Image();
+  img.src = src;
+}
+
+const CertificatesModal = ({ onClose, certificates = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [zoom, setZoom] = useState(MIN_ZOOM);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
   const dragStart = useRef({ x: 0, y: 0 });
   const offsetStart = useRef({ x: 0, y: 0 });
 
-  const resetZoom = () => {
+  const resetZoom = useCallback(() => {
     setZoom(MIN_ZOOM);
     setOffset({ x: 0, y: 0 });
-  };
+  }, []);
 
-  const goNext = () => {
+  const goNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % certificates.length);
     resetZoom();
-  };
-  const goPrev = () => {
+    setImgLoaded(false);
+  }, [certificates.length, resetZoom]);
+
+  const goPrev = useCallback(() => {
     setActiveIndex(
       (prev) => (prev - 1 + certificates.length) % certificates.length,
     );
     resetZoom();
-  };
-  const goTo = (i) => {
-    setActiveIndex(i);
-    resetZoom();
-  };
+    setImgLoaded(false);
+  }, [certificates.length, resetZoom]);
+
+  const goTo = useCallback(
+    (i) => {
+      setActiveIndex(i);
+      resetZoom();
+      setImgLoaded(false);
+    },
+    [resetZoom],
+  );
 
   useEffect(() => {
-    if (!isOpen) return;
-    setActiveIndex(0);
-    resetZoom();
+    certificates.forEach((cert) => {
+      warmImageCache(cert.imgPath);
+      warmImageCache(toFormat(cert.imgPath, ".webp"));
+      warmImageCache(toFormat(cert.imgPath, ".avif"));
+    });
+  }, [certificates]);
 
-    // Lock background scroll while modal is open (html + body)
+  useEffect(() => {
     const html = document.documentElement;
     const body = document.body;
     const previousHtmlOverflow = html.style.overflow;
@@ -59,12 +80,13 @@ const CertificatesModal = ({ isOpen, onClose, certificates = [] }) => {
       html.style.overflow = previousHtmlOverflow;
       body.style.overflow = previousBodyOverflow;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen]);
+  }, [goNext, goPrev, onClose]);
 
-  if (!isOpen || certificates.length === 0) return null;
+  if (certificates.length === 0) return null;
 
   const active = certificates[activeIndex];
+  const avifSrc = toFormat(active.imgPath, ".avif");
+  const webpSrc = toFormat(active.imgPath, ".webp");
 
   const handleWheel = (e) => {
     e.preventDefault();
@@ -122,30 +144,46 @@ const CertificatesModal = ({ isOpen, onClose, certificates = [] }) => {
         </h3>
 
         <div
-          className="relative flex-center bg-black-200 rounded-lg overflow-hidden min-h-[40vh] md:min-h-[55vh]"
+          className={`relative flex-center rounded-lg overflow-hidden min-h-[40vh] md:min-h-[55vh] transition-colors duration-300 ${
+            imgLoaded ? "bg-black-200" : "bg-black-100 animate-pulse"
+          }`}
           onWheel={handleWheel}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
         >
-          <img
-            src={active.imgPath}
-            alt={active.name}
-            onClick={handleImageClick}
-            draggable={false}
-            className="max-h-[70vh] w-auto object-contain select-none"
-            style={{
-              transform: `translate(${offset.x}px, ${offset.y}px) scale(${zoom})`,
-              cursor:
-                zoom > MIN_ZOOM
-                  ? isDragging
-                    ? "grabbing"
-                    : "grab"
-                  : "zoom-in",
-              transition: isDragging ? "none" : "transform 0.15s ease-out",
-            }}
-          />
+          <picture>
+            <source srcSet={avifSrc} type="image/avif" />
+            <source srcSet={webpSrc} type="image/webp" />
+            <img
+              src={active.imgPath}
+              alt={active.name}
+              width={active.width}
+              height={active.height}
+              onClick={handleImageClick}
+              draggable={false}
+              decoding="async"
+              loading="eager"
+              onLoad={() => setImgLoaded(true)}
+              className={`max-h-[70vh] w-auto object-contain select-none transition-opacity duration-300 ${
+                imgLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                aspectRatio: `${active.width} / ${active.height}`,
+                transform: `translate(${offset.x}px, ${offset.y}px) scale(${zoom})`,
+                cursor:
+                  zoom > MIN_ZOOM
+                    ? isDragging
+                      ? "grabbing"
+                      : "grab"
+                    : "zoom-in",
+                transition: isDragging
+                  ? "none"
+                  : "transform 0.15s ease-out, opacity 0.3s ease",
+              }}
+            />
+          </picture>
 
           {/* Zoom controls */}
           <div className="absolute bottom-3 right-3 flex items-center gap-2 bg-black/60 rounded-full px-2 py-1">

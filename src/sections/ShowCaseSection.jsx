@@ -52,11 +52,19 @@ const ShowCaseSection = () => {
           {/* left */}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper p-4">
-              <img
-                src="./images/project1.png"
-                alt="Glowpoint Dashboard"
-                className="w-full h-full object-contain"
-              />
+              <picture>
+                <source srcSet="./images/project1.avif" type="image/avif" />
+                <source srcSet="./images/project1.webp" type="image/webp" />
+                <img
+                  src="./images/project1.png"
+                  alt="Glowpoint Dashboard"
+                  width="808"
+                  height="568"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-contain"
+                />
+              </picture>
             </div>
             <div className="text-content">
               <h2>
@@ -74,7 +82,18 @@ const ShowCaseSection = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#ffefdb] p-2.5 rounded-2xl overflow-hidden">
-                <img src="./images/project2.png" alt="Glowpoint" />
+                <picture>
+                  <source srcSet="./images/project2.avif" type="image/avif" />
+                  <source srcSet="./images/project2.webp" type="image/webp" />
+                  <img
+                    src="./images/project2.png"
+                    alt="Glowpoint"
+                    width="812"
+                    height="570"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <div className="text-content">
                 <h2>
@@ -86,7 +105,18 @@ const ShowCaseSection = () => {
 
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7db] p-2.5 rounded-2xl overflow-hidden">
-                <img src="./images/project3.png" alt="GoGoGhost" />
+                <picture>
+                  <source srcSet="./images/project3.avif" type="image/avif" />
+                  <source srcSet="./images/project3.webp" type="image/webp" />
+                  <img
+                    src="./images/project3.png"
+                    alt="GoGoGhost"
+                    width="908"
+                    height="681"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <div className="text-content">
                 <h2> <span className="hover:underline"><a href="https://github.com/Needleeeeeeee/go-go-ghost">GoGoGhost</a></span>: GODOT 2D Pixel Puzzle-Platformer Game</h2>
