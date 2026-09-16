@@ -1,16 +1,61 @@
-# React + Vite
+# 3D Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for **Ernest** — a React-based single-page app with 3D scenes, GSAP scroll animations, and a dark theme.
 
-Currently, two official plugins are available:
+Live: [needleeeeeeee.github.io/3d-portfolio](https://needleeeeeeee.github.io/3d-portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Featured Projects
 
-## React Compiler
+| Project | Description | Links |
+|---------|-------------|-------|
+| **Glowpoint Dashboard** | Full-stack appointments & queuing management (Next.js, ShadCN, Tailwind) | [GitHub](https://github.com/Needleeeeeeee/glowpoint-dashboard) |
+| **Glowpoint.org** | Beauty lounge booking site | [Live](https://glowpoint.org) |
+| **GoGoGhost** | 2D pixel puzzle-platformer (GODOT) | [GitHub](https://github.com/Needleeeeeeee/go-go-ghost) |
+| **Job Scraper Dashboard** | Local job pipeline scraping Indeed/LinkedIn/JobStreet, with a React + FastAPI dashboard and one-click Playwright apply automation | [GitHub](https://github.com/Needleeeeeeee/job-scraper) |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Plus additional public repos auto-fetched from the GitHub API.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** + **Vite**
+- **Three.js** / **React Three Fiber** / **Drei** — 3D room scene & floating tech logos
+- **GSAP** + **ScrollTrigger** — scroll-triggered reveals and word carousel
+- **Tailwind CSS v4**
+- **EmailJS** — contact form
+- **react-countup** — animated stat counters
+
+## Getting Started
+
+```bash
+git clone https://github.com/Needleeeeeeee/3d-portfolio.git
+cd 3d-portfolio
+npm install
+npm run dev        # http://localhost:5173
+```
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Production build → `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+
+## Deployment
+
+The site is deployed to **GitHub Pages** via a GitHub Actions workflow (`.github/workflows/deploy.yaml`). Push to `main` triggers an automatic build and deploy. The `base` path in `vite.config.js` is set to `/3d-portfolio/` for the GitHub Pages subdirectory.
+
+## Project Structure
+
+```
+src/
+├── components/       Reusable UI (Navbar, CertificatesModal, VideoShowcase, etc.)
+├── constants/        Data arrays (nav links, credentials, tech stack icons)
+├── sections/         Page sections (Hero, ShowCaseSection, MoreProjects, Contact, Footer)
+└── main.jsx          Entry point
+public/
+├── images/           Project screenshots, icons, certificates
+├── models/           GLB files for 3D scenes
+└── videos/           Demo video files
+```
