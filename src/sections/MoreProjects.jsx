@@ -1,7 +1,7 @@
 // src/sections/MoreProjects.jsx
 import { useEffect, useState } from "react";
 
-const EXCLUDE = ["3d-portfolio" , "glowpoint-client", "glowpoint-dashboard", "go-go-ghost" , "nasa-react-app", "TPWeb"];
+const EXCLUDE = ["3d-portfolio" , "glowpoint-client", "glowpoint-dashboard", "go-go-ghost" , "nasa-react-app", "TPWeb", "job-scraper"];
 
 const MoreProjects = () => {
   const [repos, setRepos] = useState([]);
