@@ -75,7 +75,7 @@ const MoreProjects = () => {
   if (status === "error") return null;
 
   return (
-    <section id="more-projects" ref={sectionRef} className="w-full mt-20 px-5 md:px-20 py-10 min-h-[40vh]">
+    <section id="more-projects" ref={sectionRef} className="w-full mt-4 md:mt-8 px-5 md:px-20 pt-4 md:pt-8 pb-10 min-h-[40vh]">
       <h2 className="text-3xl font-semibold mb-10">More Projects</h2>
       {status === "loading" ? (
         <SkeletonGrid />
