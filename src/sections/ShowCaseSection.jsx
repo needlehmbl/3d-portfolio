@@ -133,7 +133,7 @@ const ShowCaseSection = () => {
           <div className="card-border rounded-2xl p-4 md:p-8 flex flex-col gap-8">
             <VideoShowcase
               src="./videos/job-scraper-demo.mp4"
-              poster="./images/job-scraper-poster.svg"
+              poster="./images/job-scraper-poster.webp"
               alt="Job Scraper Dashboard demo"
             />
             <div className="space-y-5">

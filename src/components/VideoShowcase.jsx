@@ -1,37 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 const VideoShowcase = ({ src, poster, alt = "Project demo video" }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const videoRef = useRef(null);
-  const [videoError, setVideoError] = useState(() => !src);
 
-  const isPlaceholder = !src || videoError;
-
-  useEffect(() => {
-    if (!src) return;
-    const video = document.createElement("video");
-    const handleLoadedMetadata = () => setVideoError(false);
-    const handleError = () => setVideoError(true);
-    video.addEventListener("loadedmetadata", handleLoadedMetadata);
-    video.addEventListener("error", handleError);
-    const source = document.createElement("source");
-    source.src = src;
-    source.type = "video/mp4";
-    video.appendChild(source);
-    video.load();
-    return () => {
-      video.removeEventListener("loadedmetadata", handleLoadedMetadata);
-      video.removeEventListener("error", handleError);
-      video.removeAttribute("src");
-      video.load();
-    };
-  }, [src]);
-
-  const open = useCallback(() => {
-    setVideoError(false);
-    setIsOpen(true);
-  }, []);
+  const open = useCallback(() => setIsOpen(true), []);
   const close = useCallback(() => setIsOpen(false), []);
 
   useEffect(() => {
@@ -82,7 +55,7 @@ const VideoShowcase = ({ src, poster, alt = "Project demo video" }) => {
             </svg>
           </span>
           <span className="text-white-50 text-sm uppercase tracking-widest group-hover:text-white transition-colors">
-            {isPlaceholder ? "Demo video coming soon" : "Watch demo"}
+            Watch demo
           </span>
         </div>
       </button>
@@ -110,33 +83,13 @@ const VideoShowcase = ({ src, poster, alt = "Project demo video" }) => {
               </h3>
 
               <div className="flex-center rounded-lg overflow-hidden min-h-[40vh] md:min-h-[55vh] bg-black-200">
-                {isPlaceholder ? (
-                  <div className="flex flex-col items-center gap-5 p-8">
-                    <div className="size-20 rounded-full bg-white/5 border border-white/10 flex-center">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        className="size-10 ml-1 opacity-30"
-                        aria-hidden="true"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                    <p className="text-white-50 text-lg text-center">
-                      Demo video coming soon
-                    </p>
-                  </div>
-                ) : (
-                  <video
-                    ref={videoRef}
-                    controls
-                    autoPlay
-                    className="w-full h-full object-contain"
-                    onError={() => setVideoError(true)}
-                  >
-                    <source src={src} type="video/mp4" />
-                  </video>
-                )}
+                <video
+                  controls
+                  autoPlay
+                  className="w-full h-full object-contain"
+                >
+                  <source src={src} type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>,
