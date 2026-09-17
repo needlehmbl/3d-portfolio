@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 const VideoShowcase = ({ src, poster, alt = "Project demo video" }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,59 +87,61 @@ const VideoShowcase = ({ src, poster, alt = "Project demo video" }) => {
         </div>
       </button>
 
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-200 flex-center bg-black/80 backdrop-blur-sm px-5"
-          onClick={close}
-        >
+      {isOpen &&
+        createPortal(
           <div
-            className="relative w-full max-w-4xl bg-black-100 border border-black-50 rounded-xl p-5 md:p-8"
-            onClick={(e) => e.stopPropagation()}
+            className="fixed inset-0 z-200 flex-center bg-black/80 backdrop-blur-sm px-5"
+            onClick={close}
           >
-            <button
-              onClick={close}
-              className="absolute top-4 right-4 text-white-50 hover:text-white text-2xl leading-none cursor-pointer z-10"
-              aria-label="Close video"
+            <div
+              className="relative w-full max-w-4xl bg-black-100 border border-black-50 rounded-xl p-5 md:p-8"
+              onClick={(e) => e.stopPropagation()}
             >
-              &times;
-            </button>
+              <button
+                onClick={close}
+                className="absolute top-4 right-4 text-white-50 hover:text-white text-2xl leading-none cursor-pointer z-10"
+                aria-label="Close video"
+              >
+                &times;
+              </button>
 
-            <h3 className="text-white text-xl md:text-2xl font-semibold mb-5 pr-10">
-              {alt}
-            </h3>
+              <h3 className="text-white text-xl md:text-2xl font-semibold mb-5 pr-10">
+                {alt}
+              </h3>
 
-            <div className="flex-center rounded-lg overflow-hidden min-h-[40vh] md:min-h-[55vh] bg-black-200">
-              {isPlaceholder ? (
-                <div className="flex flex-col items-center gap-5 p-8">
-                  <div className="size-20 rounded-full bg-white/5 border border-white/10 flex-center">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      className="size-10 ml-1 opacity-30"
-                      aria-hidden="true"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
+              <div className="flex-center rounded-lg overflow-hidden min-h-[40vh] md:min-h-[55vh] bg-black-200">
+                {isPlaceholder ? (
+                  <div className="flex flex-col items-center gap-5 p-8">
+                    <div className="size-20 rounded-full bg-white/5 border border-white/10 flex-center">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="white"
+                        className="size-10 ml-1 opacity-30"
+                        aria-hidden="true"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-white-50 text-lg text-center">
+                      Demo video coming soon
+                    </p>
                   </div>
-                  <p className="text-white-50 text-lg text-center">
-                    Demo video coming soon
-                  </p>
-                </div>
-              ) : (
-                <video
-                  ref={videoRef}
-                  controls
-                  autoPlay
-                  className="w-full h-full object-contain"
-                  onError={() => setVideoError(true)}
-                >
-                  <source src={src} type="video/mp4" />
-                </video>
-              )}
+                ) : (
+                  <video
+                    ref={videoRef}
+                    controls
+                    autoPlay
+                    className="w-full h-full object-contain"
+                    onError={() => setVideoError(true)}
+                  >
+                    <source src={src} type="video/mp4" />
+                  </video>
+                )}
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body,
+        )}
     </>
   );
 };
