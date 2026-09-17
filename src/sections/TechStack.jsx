@@ -15,13 +15,16 @@ const TechStack = () => {
         duration: 1,
         stagger: 0.2,
         ease: "power2.out",
+        overwrite: "auto",
         scrollTrigger: {
           trigger: ".tech-grid",
           start: "top 80%",
+          once: true,
+          toggleActions: "play none none none",
         },
       }
     );
-  });
+  }, []);
   return (
     <div id="skills" className="flex-center section-padding">
       <div className="w-full h-full md:px-8 px-5">

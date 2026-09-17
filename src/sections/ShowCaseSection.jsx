@@ -22,6 +22,7 @@ const ShowCaseSection = () => {
     ];
 
     projects.forEach((card, index) => {
+      if (!card) return;
       gsap.fromTo(
         card,
         { y: 50, opacity: 0 },
@@ -30,9 +31,12 @@ const ShowCaseSection = () => {
           opacity: 1,
           duration: 1,
           delay: 0.3 * (index + 1),
+          overwrite: "auto",
           scrollTrigger: {
             trigger: card,
             start: "top bottom -=100",
+            once: true,
+            toggleActions: "play none none none",
           },
         }
       );

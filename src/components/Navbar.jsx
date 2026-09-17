@@ -4,13 +4,22 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const handleScroll = () =>{
-        const isScrolled = window.scrollY > 10;
-        setScrolled(isScrolled)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    let ticking = false;
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setScrolled((prev) => {
+          const next = window.scrollY > 10;
+          return prev === next ? prev : next;
+        });
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
