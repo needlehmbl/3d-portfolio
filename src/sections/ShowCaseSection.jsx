@@ -8,16 +8,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ShowCaseSection = () => {
   const sectionRef = useRef(null);
+  const project0Ref = useRef(null);
   const project1Ref = useRef(null);
-  const project2Ref = useRef(null);
   const project3Ref = useRef(null);
   const project4Ref = useRef(null);
 
   useGSAP(() => {
     const projects = [
+      project0Ref.current,
       project4Ref.current,
       project1Ref.current,
-      project2Ref.current,
       project3Ref.current,
     ];
 
@@ -55,7 +55,54 @@ const ShowCaseSection = () => {
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
-        {/* Job Scraper Dashboard — featured on top */}
+        {/* Media Manager Dashboard — featured on top */}
+        <div className="w-full mb-10 md:mb-14" ref={project0Ref}>
+          <div className="card-border rounded-2xl p-4 md:p-8 flex flex-col gap-8">
+            <VideoShowcase
+              src="./videos/media-manager-demo.mp4"
+              poster="./images/media-manager-poster.webp"
+              alt="Media Manager Dashboard demo"
+            />
+            <div className="space-y-5">
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Python",
+                  "FastAPI",
+                  "SQLite",
+                  "React",
+                  "Tailwind CSS",
+                  "yt-dlp",
+                  "Docker",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-black-200 py-1 px-3 rounded-full text-sm text-white-50"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold">
+                <span className="hover:underline">
+                  <a href="https://github.com/Needleeeeeeee/media-manager">
+                    Media Manager Dashboard
+                  </a>
+                </span>
+                : Self-Hosted Video Downloads with a Smart Library
+              </h2>
+              <p className="text-white-50 md:text-xl">
+                A self-hosted download manager that queues URLs and playlists
+                from most video sites, downloads them in parallel with metadata
+                embedded and auto-resume on interruptions, and organizes
+                everything into a searchable dark-themed library. A React +
+                FastAPI dashboard tracks live progress while scheduled channel
+                checks auto-queue new uploads.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Job Scraper Dashboard — second feature */}
         <div className="w-full mb-10 md:mb-14" ref={project4Ref}>
           <div className="card-border rounded-2xl p-4 md:p-8 flex flex-col gap-8">
             <VideoShowcase
@@ -133,29 +180,6 @@ const ShowCaseSection = () => {
 
           {/* right */}
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={project2Ref}>
-              <div className="image-wrapper bg-[#ffefdb] p-2.5 rounded-2xl overflow-hidden">
-                <picture>
-                  <source srcSet="./images/project2.avif" type="image/avif" />
-                  <source srcSet="./images/project2.webp" type="image/webp" />
-                  <img
-                    src="./images/project2.png"
-                    alt="Glowpoint"
-                    width="812"
-                    height="570"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              </div>
-              <div className="text-content">
-                <h2>
-                  <span className="hover:underline"><a href="https://glowpoint.org">Glowpoint.org</a></span>: Booking Beauty Lounge Services with
-                  Elegance
-                </h2>
-              </div>
-            </div>
-
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7db] p-2.5 rounded-2xl overflow-hidden">
                 <picture>
