@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://needleeeeeeee.github.io/3d-portfolio/",
+  "homepage": "https://needlehmbl.github.io/3d-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

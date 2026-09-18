@@ -2,16 +2,16 @@
 
 Personal portfolio site for **Ernest** — a React-based single-page app with 3D scenes, GSAP scroll animations, and a dark theme.
 
-Live: [needleeeeeeee.github.io/3d-portfolio](https://needleeeeeeee.github.io/3d-portfolio/)
+Live: [needlehmbl.github.io/3d-portfolio](https://needlehmbl.github.io/3d-portfolio/)
 
 ## Featured Projects
 
 | Project | Description | Links |
 |---------|-------------|-------|
-| **Glowpoint Dashboard** | Full-stack appointments & queuing management (Next.js, ShadCN, Tailwind) | [GitHub](https://github.com/Needleeeeeeee/glowpoint-dashboard) |
+| **Glowpoint Dashboard** | Full-stack appointments & queuing management (Next.js, ShadCN, Tailwind) | [GitHub](https://github.com/needlehmbl/glowpoint-dashboard) |
 | **Glowpoint.org** | Beauty lounge booking site | [Live](https://glowpoint.org) |
-| **GoGoGhost** | 2D pixel puzzle-platformer (GODOT) | [GitHub](https://github.com/Needleeeeeeee/go-go-ghost) |
-| **Job Scraper Dashboard** | Local job pipeline scraping Indeed/LinkedIn/JobStreet, with a React + FastAPI dashboard and one-click Playwright apply automation | [GitHub](https://github.com/Needleeeeeeee/job-scraper) |
+| **GoGoGhost** | 2D pixel puzzle-platformer (GODOT) | [GitHub](https://github.com/needlehmbl/go-go-ghost) |
+| **Job Scraper Dashboard** | Local job pipeline scraping Indeed/LinkedIn/JobStreet, with a React + FastAPI dashboard and one-click Playwright apply automation | [GitHub](https://github.com/needlehmbl/job-scraper) |
 
 Plus additional public repos auto-fetched from the GitHub API.
 
@@ -27,7 +27,7 @@ Plus additional public repos auto-fetched from the GitHub API.
 ## Getting Started
 
 ```bash
-git clone https://github.com/Needleeeeeeee/3d-portfolio.git
+git clone https://github.com/needlehmbl/3d-portfolio.git
 cd 3d-portfolio
 npm install
 npm run dev        # http://localhost:5173

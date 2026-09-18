@@ -2,7 +2,7 @@
   {
     "id": 1372493296,
     "name": "doc-pipeline",
-    "html_url": "https://github.com/Needleeeeeeee/doc-pipeline",
+    "html_url": "https://github.com/needlehmbl/doc-pipeline",
     "description": "Local offline document intelligence pipeline: ingest PDFs/images/CSVs, extract structured data with Ollama, validate schema + confidence, load into SQLite.",
     "language": "Python",
     "stargazers_count": 0,
@@ -11,7 +11,7 @@
   {
     "id": 1374056921,
     "name": "security-audit",
-    "html_url": "https://github.com/Needleeeeeeee/security-audit",
+    "html_url": "https://github.com/needlehmbl/security-audit",
     "description": "Local network & host security scanner: discovers live hosts, scans for open ports/services, checks SSH and firewall hardening, and generates a severity-ranked Markdown audit report.",
     "language": "Python",
     "stargazers_count": 0,
@@ -20,7 +20,7 @@
   {
     "id": 1373828966,
     "name": "local-rag",
-    "html_url": "https://github.com/Needleeeeeeee/local-rag",
+    "html_url": "https://github.com/needlehmbl/local-rag",
     "description": "Fully-local RAG pipeline: chunk, embed via Ollama, search vectors in Postgres/pgvector, answer with cited sources. FastAPI + SSE streaming + demo UI.",
     "language": "Python",
     "stargazers_count": 0,
@@ -29,7 +29,7 @@
   {
     "id": 998697643,
     "name": "FinalProjectMobile",
-    "html_url": "https://github.com/Needleeeeeeee/FinalProjectMobile",
+    "html_url": "https://github.com/needlehmbl/FinalProjectMobile",
     "description": "Android Translator App using Google ML Kit and Firebase Realtime Database",
     "language": "Kotlin",
     "stargazers_count": 0,

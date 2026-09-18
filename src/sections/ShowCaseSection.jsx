@@ -109,7 +109,7 @@ const ShowCaseSection = () => {
                 ))}
               </div>
               <h2 className="text-2xl md:text-3xl font-bold">
-                <TitleLink href="https://github.com/Needleeeeeeee/job-scraper">
+                <TitleLink href="https://github.com/needlehmbl/job-scraper">
                   Job Scraper Dashboard
                 </TitleLink>
                 : Local Job-Search Pipeline with One-Click Apply
@@ -153,7 +153,7 @@ const ShowCaseSection = () => {
                 ))}
               </div>
               <h2>
-                <TitleLink href="https://github.com/Needleeeeeeee/media-manager">Media Manager Dashboard</TitleLink>: Self-Hosted Video Downloads with a Smart Library
+                <TitleLink href="https://github.com/needlehmbl/media-manager">Media Manager Dashboard</TitleLink>: Self-Hosted Video Downloads with a Smart Library
               </h2>
               <p className="text-white-50 md:text-xl">
                 A self-hosted download manager that queues URLs and playlists
@@ -185,7 +185,7 @@ const ShowCaseSection = () => {
               </div>
               <div className="text-content">
                 <h2>
-                  <TitleLink href="https://github.com/Needleeeeeeee/glowpoint-dashboard">Glowpoint Dashboard</TitleLink>: Appointments and Queuing Management Made
+                  <TitleLink href="https://github.com/needlehmbl/glowpoint-dashboard">Glowpoint Dashboard</TitleLink>: Appointments and Queuing Management Made
                   Simple
                 </h2>
               </div>
@@ -207,7 +207,7 @@ const ShowCaseSection = () => {
                 </picture>
               </div>
               <div className="text-content">
-                <h2> <TitleLink href="https://github.com/Needleeeeeeee/go-go-ghost">GoGoGhost</TitleLink>: GODOT 2D Pixel Puzzle-Platformer Game</h2>
+                <h2> <TitleLink href="https://github.com/needlehmbl/go-go-ghost">GoGoGhost</TitleLink>: GODOT 2D Pixel Puzzle-Platformer Game</h2>
               </div>
             </div>
           </div>
