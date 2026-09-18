@@ -6,6 +6,32 @@ import VideoShowcase from "../components/VideoShowcase";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Project title link: always subtly underlined with a small external-link
+// glyph so titles read as links at a glance, staying monochrome to match
+// the theme. Underline and glyph brighten on hover/focus.
+const TitleLink = ({ href, children }) => (
+  <a
+    href={href}
+    title="Open GitHub repository"
+    className="group/link underline decoration-white/25 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-sm"
+  >
+    {children}
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="inline-block size-[0.75em] ml-1.5 -mt-0.5 opacity-40 transition-opacity group-hover/link:opacity-100"
+    >
+      <path d="M7 17 17 7" />
+      <path d="M7 7h10v10" />
+    </svg>
+  </a>
+);
+
 const ShowCaseSection = () => {
   const sectionRef = useRef(null);
   const project1Ref = useRef(null);
@@ -83,11 +109,9 @@ const ShowCaseSection = () => {
                 ))}
               </div>
               <h2 className="text-2xl md:text-3xl font-bold">
-                <span className="hover:underline">
-                  <a href="https://github.com/Needleeeeeeee/job-scraper">
-                    Job Scraper Dashboard
-                  </a>
-                </span>
+                <TitleLink href="https://github.com/Needleeeeeeee/job-scraper">
+                  Job Scraper Dashboard
+                </TitleLink>
                 : Local Job-Search Pipeline with One-Click Apply
               </h2>
               <p className="text-white-50 md:text-xl">
@@ -129,7 +153,7 @@ const ShowCaseSection = () => {
                 ))}
               </div>
               <h2>
-                <span className="hover:underline"><a href="https://github.com/Needleeeeeeee/media-manager">Media Manager Dashboard</a></span>: Self-Hosted Video Downloads with a Smart Library
+                <TitleLink href="https://github.com/Needleeeeeeee/media-manager">Media Manager Dashboard</TitleLink>: Self-Hosted Video Downloads with a Smart Library
               </h2>
               <p className="text-white-50 md:text-xl">
                 A self-hosted download manager that queues URLs and playlists
@@ -161,7 +185,7 @@ const ShowCaseSection = () => {
               </div>
               <div className="text-content">
                 <h2>
-                  <span className="hover:underline"><a href="https://github.com/Needleeeeeeee/glowpoint-dashboard">Glowpoint Dashboard</a></span>: Appointments and Queuing Management Made
+                  <TitleLink href="https://github.com/Needleeeeeeee/glowpoint-dashboard">Glowpoint Dashboard</TitleLink>: Appointments and Queuing Management Made
                   Simple
                 </h2>
               </div>
@@ -183,7 +207,7 @@ const ShowCaseSection = () => {
                 </picture>
               </div>
               <div className="text-content">
-                <h2> <span className="hover:underline"><a href="https://github.com/Needleeeeeeee/go-go-ghost">GoGoGhost</a></span>: GODOT 2D Pixel Puzzle-Platformer Game</h2>
+                <h2> <TitleLink href="https://github.com/Needleeeeeeee/go-go-ghost">GoGoGhost</TitleLink>: GODOT 2D Pixel Puzzle-Platformer Game</h2>
               </div>
             </div>
           </div>
