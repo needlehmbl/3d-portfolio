@@ -194,12 +194,12 @@ const techStackIcons = [
 const socialImgs = [
   {
     name: "fb",
-    url: "https://www.facebook.com/Ernest",
+    url: "https://www.facebook.com/Ernest.Soquena",
     imgPath: "./images/fb.png",
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/ernest-4494a4393/",
+    url: "https://www.linkedin.com/in/ernest-soquena-4494a4393/",
     imgPath: "./images/linkedin.png",
   },
 ];

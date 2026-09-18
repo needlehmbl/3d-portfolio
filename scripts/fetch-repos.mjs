@@ -23,6 +23,7 @@ const EXCLUDE = [
   "TPWeb",
   "job-scraper",
   "media-manager",
+  "local-rag",
 ];
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");

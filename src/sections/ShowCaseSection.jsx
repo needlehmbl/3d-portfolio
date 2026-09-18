@@ -169,25 +169,15 @@ const ShowCaseSection = () => {
           {/* right */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
-              <div className="image-wrapper p-2.5 rounded-2xl overflow-hidden">
-                <picture>
-                  <source srcSet="./images/project1.avif" type="image/avif" />
-                  <source srcSet="./images/project1.webp" type="image/webp" />
-                  <img
-                    src="./images/project1.png"
-                    alt="Glowpoint Dashboard"
-                    width="808"
-                    height="568"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-              </div>
               <div className="text-content">
                 <h2>
-                  <TitleLink href="https://github.com/needlehmbl/glowpoint-dashboard">Glowpoint Dashboard</TitleLink>: Appointments and Queuing Management Made
-                  Simple
+                  <TitleLink href="https://github.com/needlehmbl/local-rag">Local RAG</TitleLink>: Fully-Local Cited Answers over Your Docs
                 </h2>
+                <p className="text-white-50 md:text-xl">
+                  Chunk, embed via Ollama, search Postgres/pgvector, and stream
+                  answers with cited sources through FastAPI + SSE and a demo
+                  UI — no data leaves the machine.
+                </p>
               </div>
             </div>
 

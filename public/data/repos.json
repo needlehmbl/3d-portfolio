@@ -18,15 +18,6 @@
     "pushed_at": "2026-09-17T08:08:37Z"
   },
   {
-    "id": 1373828966,
-    "name": "local-rag",
-    "html_url": "https://github.com/needlehmbl/local-rag",
-    "description": "Fully-local RAG pipeline: chunk, embed via Ollama, search vectors in Postgres/pgvector, answer with cited sources. FastAPI + SSE streaming + demo UI.",
-    "language": "Python",
-    "stargazers_count": 0,
-    "pushed_at": "2026-09-17T02:13:25Z"
-  },
-  {
     "id": 998697643,
     "name": "FinalProjectMobile",
     "html_url": "https://github.com/needlehmbl/FinalProjectMobile",
