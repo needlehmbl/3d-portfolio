@@ -84,6 +84,9 @@ const AnimatedCounter = () => {
             />
           </div>
           <div className="text-white-50 text-lg">{counterItems[1].label}</div>
+          <div className="text-white-50/60 text-sm mt-1">
+            GPA equivalent: 3.64 / 4.0
+          </div>
         </div>
       </div>
 
