@@ -13,7 +13,7 @@ const TitleLink = ({ href, children }) => (
   <a
     href={href}
     title="Open GitHub repository"
-    className="group/link underline decoration-white/25 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-sm"
+    className="group/link underline decoration-1 decoration-white/25 underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-sm"
   >
     {children}
     <svg
