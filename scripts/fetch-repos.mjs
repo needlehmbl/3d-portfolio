@@ -22,6 +22,7 @@ const EXCLUDE = [
   "nasa-react-app",
   "TPWeb",
   "job-scraper",
+  "media-manager",
 ];
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");

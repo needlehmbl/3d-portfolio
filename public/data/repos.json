@@ -1,14 +1,5 @@
 [
   {
-    "id": 1375196621,
-    "name": "media-manager",
-    "html_url": "https://github.com/Needleeeeeeee/media-manager",
-    "description": "Self-hosted media download manager: parallel yt-dlp queue with playlist recursion, metadata embedding and auto-resume, searchable library, recurring channel checks. FastAPI + React, Docker Compose.",
-    "language": "Python",
-    "stargazers_count": 0,
-    "pushed_at": "2026-09-18T00:22:00Z"
-  },
-  {
     "id": 1372493296,
     "name": "doc-pipeline",
     "html_url": "https://github.com/Needleeeeeeee/doc-pipeline",
