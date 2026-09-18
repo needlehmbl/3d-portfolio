@@ -10,7 +10,7 @@ Live: [needlehmbl.github.io/3d-portfolio](https://needlehmbl.github.io/3d-portfo
 |---------|-------------|-------|
 | **Job Scraper Dashboard** | Local job pipeline scraping Indeed/LinkedIn/JobStreet, with a React + FastAPI dashboard and one-click Playwright apply automation | [GitHub](https://github.com/needlehmbl/job-scraper) |
 | **Media Manager** | Self-hosted media download manager: parallel yt-dlp queue with playlist recursion, metadata embedding and auto-resume, searchable library (FastAPI + React, Docker Compose) | [GitHub](https://github.com/needlehmbl/media-manager) |
-| **Local RAG** | Fully-local RAG pipeline: chunk, embed via Ollama, search vectors in Postgres/pgvector, answer with cited sources (FastAPI + SSE streaming + demo UI) | [GitHub](https://github.com/needlehmbl/local-rag) |
+| **Doc Pipeline** | Local offline document intelligence pipeline: ingest PDFs/images/CSVs, extract structured data with Ollama, validate schema + confidence, load into SQLite | [GitHub](https://github.com/needlehmbl/doc-pipeline) |
 | **GoGoGhost** | 2D pixel puzzle-platformer (GODOT) | [GitHub](https://github.com/needlehmbl/go-go-ghost) |
 
 Plus additional public repos auto-fetched from the GitHub API.

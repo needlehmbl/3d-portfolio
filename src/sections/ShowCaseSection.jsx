@@ -169,15 +169,24 @@ const ShowCaseSection = () => {
           {/* right */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
+              <div className="image-wrapper p-2.5 rounded-2xl overflow-hidden">
+                <picture>
+                  <source srcSet="./images/doc-pipeline.avif" type="image/avif" />
+                  <source srcSet="./images/doc-pipeline.webp" type="image/webp" />
+                  <img
+                    src="./images/doc-pipeline.png"
+                    alt="Doc Pipeline dashboard"
+                    width="1299"
+                    height="660"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
               <div className="text-content">
                 <h2>
-                  <TitleLink href="https://github.com/needlehmbl/local-rag">Local RAG</TitleLink>: Fully-Local Cited Answers over Your Docs
+                  <TitleLink href="https://github.com/needlehmbl/doc-pipeline">Doc Pipeline</TitleLink>: Offline Document Intelligence with Ollama
                 </h2>
-                <p className="text-white-50 md:text-xl">
-                  Chunk, embed via Ollama, search Postgres/pgvector, and stream
-                  answers with cited sources through FastAPI + SSE and a demo
-                  UI — no data leaves the machine.
-                </p>
               </div>
             </div>
 

@@ -1,14 +1,5 @@
 [
   {
-    "id": 1372493296,
-    "name": "doc-pipeline",
-    "html_url": "https://github.com/needlehmbl/doc-pipeline",
-    "description": "Local offline document intelligence pipeline: ingest PDFs/images/CSVs, extract structured data with Ollama, validate schema + confidence, load into SQLite.",
-    "language": "Python",
-    "stargazers_count": 0,
-    "pushed_at": "2026-09-17T10:08:21Z"
-  },
-  {
     "id": 1374056921,
     "name": "security-audit",
     "html_url": "https://github.com/needlehmbl/security-audit",
@@ -16,6 +7,15 @@
     "language": "Python",
     "stargazers_count": 0,
     "pushed_at": "2026-09-17T08:08:37Z"
+  },
+  {
+    "id": 1373828966,
+    "name": "local-rag",
+    "html_url": "https://github.com/needlehmbl/local-rag",
+    "description": "Fully-local RAG pipeline: chunk, embed via Ollama, search vectors in Postgres/pgvector, answer with cited sources. FastAPI + SSE streaming + demo UI.",
+    "language": "Python",
+    "stargazers_count": 0,
+    "pushed_at": "2026-09-17T02:13:25Z"
   },
   {
     "id": 998697643,
