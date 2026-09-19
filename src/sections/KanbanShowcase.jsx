@@ -75,8 +75,9 @@ const KanbanShowcase = () => {
           href={DEMO_URL}
           target="_blank"
           rel="noreferrer"
-          title="Open the live kanban demo"
-          className="block w-full overflow-hidden rounded-xl border border-black-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+          title="Open the live interactive kanban demo"
+          aria-label="Open live interactive kanban demo"
+          className="group/kanban relative block w-full overflow-hidden rounded-xl border border-black-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
         >
           <img
             src="./images/kanban-poster.png"
@@ -85,8 +86,35 @@ const KanbanShowcase = () => {
             height="648"
             loading="lazy"
             decoding="async"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover/kanban:scale-[1.02]"
           />
+          {/* LIVE badge — always visible */}
+          <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-green-500/15 border border-green-400/40 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-widest text-green-300 backdrop-blur-sm">
+            <span className="relative flex size-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full size-2 bg-green-400" />
+            </span>
+            Live · Interactive
+          </span>
+          {/* Interactible overlay — hint on mobile, reveal on hover/focus */}
+          <span className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-100 md:opacity-0 md:group-hover/kanban:opacity-100 md:group-focus-visible/kanban:opacity-100 transition-opacity duration-300">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white text-black text-sm font-semibold px-5 py-2.5 shadow-lg transition-transform group-hover/kanban:scale-105">
+              Click for live demo
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                className="size-4"
+              >
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </span>
+          </span>
         </a>
         <div className="space-y-5">
           <div className="flex flex-wrap gap-2">
