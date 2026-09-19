@@ -4,6 +4,7 @@ import Hero from "./sections/Hero";
 import LazySection from "./components/LazySection";
 
 const ShowCaseSection = lazy(() => import("./sections/ShowCaseSection"));
+const KanbanShowcase = lazy(() => import("./sections/KanbanShowcase"));
 const MoreProjects = lazy(() => import("./sections/MoreProjects"));
 const LogoSection = lazy(() => import("./components/LogoSection"));
 const FeatureCards = lazy(() => import("./sections/FeatureCards"));
@@ -18,6 +19,9 @@ const App = () => {
       <Hero />
       <LazySection minHeight="80vh">
         <ShowCaseSection />
+      </LazySection>
+      <LazySection minHeight="80vh">
+        <KanbanShowcase />
       </LazySection>
       <LazySection minHeight="40vh">
         <MoreProjects />

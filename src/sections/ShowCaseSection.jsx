@@ -38,7 +38,6 @@ const ShowCaseSection = () => {
   const project2Ref = useRef(null);
   const project3Ref = useRef(null);
   const project4Ref = useRef(null);
-  const project5Ref = useRef(null);
 
   useGSAP(() => {
     const projects = [
@@ -46,7 +45,6 @@ const ShowCaseSection = () => {
       project1Ref.current,
       project2Ref.current,
       project3Ref.current,
-      project5Ref.current,
     ];
 
     projects.forEach((card, index) => {
@@ -210,63 +208,6 @@ const ShowCaseSection = () => {
               <div className="text-content">
                 <h2> <TitleLink href="https://github.com/needlehmbl/go-go-ghost">GoGoGhost</TitleLink>: GODOT 2D Pixel Puzzle-Platformer Game</h2>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Kanban Board — full-width feature below the showcase cards */}
-        <div className="w-full mt-10 md:mt-14" ref={project5Ref}>
-          <div className="card-border rounded-2xl p-4 md:p-8 flex flex-col gap-8">
-            <div className="relative w-full aspect-video overflow-hidden rounded-xl bg-black-100 border border-black-50">
-              <div className="absolute inset-0 flex-col-center gap-4 text-center px-4">
-                <p className="text-white-50 text-sm uppercase tracking-widest">
-                  Real-time Kanban
-                </p>
-                <p className="text-white text-2xl md:text-3xl font-semibold">
-                  Drag, drop &amp; sync — no login needed
-                </p>
-                <a
-                  href="https://needlehmbl.github.io/kanban-demo/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-block rounded-full border border-white/25 bg-white/10 px-6 py-2.5 text-sm text-white transition-colors hover:bg-white/20"
-                >
-                  Try live demo
-                </a>
-              </div>
-            </div>
-            <div className="space-y-5">
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Node.js",
-                  "Express",
-                  "Socket.io",
-                  "Prisma",
-                  "PostgreSQL",
-                  "React",
-                  "Docker",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-black-200 py-1 px-3 rounded-full text-sm text-white-50"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold">
-                <TitleLink href="https://github.com/needlehmbl/kanban">
-                  Kanban Board
-                </TitleLink>
-                : Real-Time Collaborative Board with Demo Mode
-              </h2>
-              <p className="text-white-50 md:text-xl">
-                A multi-user kanban board with GitHub OAuth, drag-and-drop
-                columns, and live updates across clients via Socket.io rooms,
-                backed by Postgres and Prisma. The live demo runs entirely in
-                the browser — a seeded board with simulated collaborators and
-                presence, no login required.
-              </p>
             </div>
           </div>
         </div>
