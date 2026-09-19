@@ -18,6 +18,7 @@ const EXCLUDE = [
   "3d-portfolio",
   "needlehmbl",
   "kanban",
+  "kanban-demo",
   "go-go-ghost",
   "nasa-react-app",
   "TPWeb",
