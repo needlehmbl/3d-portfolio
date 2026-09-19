@@ -71,24 +71,23 @@ const KanbanShowcase = () => {
   return (
     <section ref={sectionRef} className="w-full px-5 md:px-20 py-10 md:py-14">
       <div ref={cardRef} className="card-border rounded-2xl p-4 md:p-8 flex flex-col gap-8">
-        <div className="relative w-full aspect-video overflow-hidden rounded-xl bg-black-100 border border-black-50">
-          <div className="absolute inset-0 flex-col-center gap-4 text-center px-4">
-            <p className="text-white-50 text-sm uppercase tracking-widest">
-              Real-time Kanban
-            </p>
-            <p className="text-white text-2xl md:text-4xl font-semibold">
-              Drag, drop &amp; sync — no login needed
-            </p>
-            <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block rounded-full border border-white/25 bg-white/10 px-6 py-2.5 text-sm text-white transition-colors hover:bg-white/20"
-            >
-              Try live demo
-            </a>
-          </div>
-        </div>
+        <a
+          href={DEMO_URL}
+          target="_blank"
+          rel="noreferrer"
+          title="Open the live kanban demo"
+          className="block w-full overflow-hidden rounded-xl border border-black-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+        >
+          <img
+            src="./images/kanban-poster.png"
+            alt="Kanban board demo — drag-and-drop columns with live presence"
+            width="1290"
+            height="648"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
+        </a>
         <div className="space-y-5">
           <div className="flex flex-wrap gap-2">
             {TECHS.map((tech) => (
@@ -111,6 +110,16 @@ const KanbanShowcase = () => {
             a seeded board with simulated collaborators and presence, no login
             required.
           </p>
+          <div>
+            <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block rounded-full border border-white/25 bg-white/10 px-6 py-2.5 text-sm text-white transition-colors hover:bg-white/20"
+            >
+              Try live demo
+            </a>
+          </div>
         </div>
       </div>
     </section>
