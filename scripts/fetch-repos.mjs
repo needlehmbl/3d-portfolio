@@ -16,8 +16,8 @@ import { fileURLToPath } from "node:url";
 const USER = "needlehmbl";
 const EXCLUDE = [
   "3d-portfolio",
-  "glowpoint-client",
-  "glowpoint-dashboard",
+  "needlehmbl",
+  "kanban",
   "go-go-ghost",
   "nasa-react-app",
   "TPWeb",

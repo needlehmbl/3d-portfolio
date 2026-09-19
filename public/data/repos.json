@@ -1,5 +1,32 @@
 [
   {
+    "id": 1376730310,
+    "name": "kanban-demo",
+    "html_url": "https://github.com/needlehmbl/kanban-demo",
+    "description": "Live browser-only demo of the kanban board (auto-built from needlehmbl/kanban)",
+    "language": null,
+    "stargazers_count": 0,
+    "pushed_at": "2026-09-19T04:36:33Z"
+  },
+  {
+    "id": 1071914334,
+    "name": "glowpoint-dashboard",
+    "html_url": "https://github.com/needlehmbl/glowpoint-dashboard",
+    "description": null,
+    "language": "TypeScript",
+    "stargazers_count": 0,
+    "pushed_at": "2026-09-18T11:22:39Z"
+  },
+  {
+    "id": 1071897016,
+    "name": "glowpoint-client",
+    "html_url": "https://github.com/needlehmbl/glowpoint-client",
+    "description": null,
+    "language": "JavaScript",
+    "stargazers_count": 0,
+    "pushed_at": "2026-09-18T11:22:36Z"
+  },
+  {
     "id": 1374056921,
     "name": "security-audit",
     "html_url": "https://github.com/needlehmbl/security-audit",
