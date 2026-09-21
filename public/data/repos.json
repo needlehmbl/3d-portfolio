@@ -1,9 +1,36 @@
 [
   {
+    "id": 1377950089,
+    "name": "algo-visualizer",
+    "html_url": "https://github.com/needlehmbl/algo-visualizer",
+    "description": "JavaFX visualizer for pathfinding (BFS, Dijkstra, A*) and sorting (Bubble, Merge, Quick) algorithms with step-sequence replay animation",
+    "language": "Java",
+    "stargazers_count": 0,
+    "pushed_at": "2026-09-20T05:34:28Z"
+  },
+  {
+    "id": 1377949937,
+    "name": "mini-lang",
+    "html_url": "https://github.com/needlehmbl/mini-lang",
+    "description": "Mini interpreted language in plain Java: hand-written lexer, recursive-descent parser, tree-walking interpreter with closures and a CLI REPL",
+    "language": "Java",
+    "stargazers_count": 0,
+    "pushed_at": "2026-09-20T05:20:05Z"
+  },
+  {
+    "id": 1377767857,
+    "name": "inventory-api",
+    "html_url": "https://github.com/needlehmbl/inventory-api",
+    "description": "Library-style lending API: ASP.NET Core + EF Core/Postgres with JWT auth, roles, concurrent-safe checkout workflow, React frontend, Docker Compose",
+    "language": "C#",
+    "stargazers_count": 0,
+    "pushed_at": "2026-09-20T01:19:42Z"
+  },
+  {
     "id": 1071914334,
     "name": "glowpoint-dashboard",
     "html_url": "https://github.com/needlehmbl/glowpoint-dashboard",
-    "description": null,
+    "description": "Admin dashboard for Glow Point salon bookings (Next.js + TypeScript + Supabase): appointments, payments, calendar, analytics",
     "language": "TypeScript",
     "stargazers_count": 0,
     "pushed_at": "2026-09-18T11:22:39Z"
@@ -12,7 +39,7 @@
     "id": 1071897016,
     "name": "glowpoint-client",
     "html_url": "https://github.com/needlehmbl/glowpoint-client",
-    "description": null,
+    "description": "Customer booking app for Glow Point salon (React + Vite + Supabase): service catalog, booking flow, GCash QR payments, live walk-in queue",
     "language": "JavaScript",
     "stargazers_count": 0,
     "pushed_at": "2026-09-18T11:22:36Z"

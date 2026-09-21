@@ -1,6 +1,6 @@
 # 3D Portfolio
 
-Personal portfolio site for **Ernest** — a React-based single-page app with 3D scenes, GSAP scroll animations, and a dark theme.
+Personal portfolio site for **Ernest Soquena** — a React-based single-page app with 3D scenes, GSAP scroll animations, and a dark theme.
 
 Live: [needlehmbl.github.io/3d-portfolio](https://needlehmbl.github.io/3d-portfolio/)
 
@@ -8,10 +8,10 @@ Live: [needlehmbl.github.io/3d-portfolio](https://needlehmbl.github.io/3d-portfo
 
 | Project | Description | Links |
 |---------|-------------|-------|
-| **Job Scraper Dashboard** | Local job pipeline scraping Indeed/LinkedIn/JobStreet, with a React + FastAPI dashboard and one-click Playwright apply automation | [GitHub](https://github.com/needlehmbl/job-scraper) |
-| **Media Manager** | Self-hosted media download manager: parallel yt-dlp queue with playlist recursion, metadata embedding and auto-resume, searchable library (FastAPI + React, Docker Compose) | [GitHub](https://github.com/needlehmbl/media-manager) |
-| **Doc Pipeline** | Local offline document intelligence pipeline: ingest PDFs/images/CSVs, extract structured data with Ollama, validate schema + confidence, load into SQLite | [GitHub](https://github.com/needlehmbl/doc-pipeline) |
+| **Glowpoint Dashboard** | Full-stack appointments & queuing management (Next.js, ShadCN, Tailwind) | [GitHub](https://github.com/needlehmbl/glowpoint-dashboard) · [Demo](https://glowpoint-dashboard.vercel.app) |
+| **Glowpoint Client** | Beauty lounge booking site (customer-facing booking app) | [GitHub](https://github.com/needlehmbl/glowpoint-client) |
 | **GoGoGhost** | 2D pixel puzzle-platformer (GODOT) | [GitHub](https://github.com/needlehmbl/go-go-ghost) |
+| **Job Scraper Dashboard** | Local job pipeline scraping Indeed/LinkedIn/JobStreet, with a React + FastAPI dashboard and one-click Playwright apply automation | [GitHub](https://github.com/needlehmbl/job-scraper) |
 
 Plus additional public repos auto-fetched from the GitHub API.
 

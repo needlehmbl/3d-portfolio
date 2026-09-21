@@ -171,13 +171,13 @@ const ShowCaseSection = () => {
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper p-2.5 rounded-2xl overflow-hidden">
                 <picture>
-                  <source srcSet="./images/doc-pipeline.avif" type="image/avif" />
-                  <source srcSet="./images/doc-pipeline.webp" type="image/webp" />
+                  <source srcSet="./images/project1.avif" type="image/avif" />
+                  <source srcSet="./images/project1.webp" type="image/webp" />
                   <img
-                    src="./images/doc-pipeline.png"
-                    alt="Doc Pipeline dashboard"
-                    width="1299"
-                    height="660"
+                    src="./images/project1.png"
+                    alt="Glowpoint Dashboard"
+                    width="808"
+                    height="568"
                     loading="lazy"
                     decoding="async"
                   />
@@ -185,7 +185,8 @@ const ShowCaseSection = () => {
               </div>
               <div className="text-content">
                 <h2>
-                  <TitleLink href="https://github.com/needlehmbl/doc-pipeline">Doc Pipeline</TitleLink>: Offline Document Intelligence with Ollama
+                  <TitleLink href="https://github.com/needlehmbl/glowpoint-dashboard">Glowpoint Dashboard</TitleLink>: Appointments and Queuing Management Made
+                  Simple
                 </h2>
               </div>
             </div>
