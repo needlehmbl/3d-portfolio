@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    # Weekly refresh so repo description edits and new repos reach the
+    # live site without a manual push. Sunday 00:00 UTC.
+    - cron: "0 0 * * 0"
   workflow_dispatch:
 
 permissions:
