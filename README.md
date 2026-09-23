@@ -13,7 +13,10 @@ Live: [needlehmbl.github.io/3d-portfolio](https://needlehmbl.github.io/3d-portfo
 | **GoGoGhost** | 2D pixel puzzle-platformer (GODOT) | [GitHub](https://github.com/needlehmbl/go-go-ghost) |
 | **Job Scraper Dashboard** | Local job pipeline scraping Indeed/LinkedIn/JobStreet, with a React + FastAPI dashboard and one-click Playwright apply automation | [GitHub](https://github.com/needlehmbl/job-scraper) |
 
-Plus additional public repos auto-fetched from the GitHub API.
+Plus a **More Projects** section dynamically fetched via the GitHub API — no manual upkeep.
+`npm run fetch-repos` snapshots `public/data/repos.json` at build time (avoids the
+unauthenticated rate limit), and CI refreshes it weekly (`.github/workflows/deploy.yaml`)
+so new repos and description edits go live automatically.
 
 ## Tech Stack
 

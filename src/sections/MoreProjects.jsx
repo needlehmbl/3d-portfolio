@@ -44,7 +44,11 @@ const MoreProjects = () => {
 
   return (
     <section id="more-projects" className="w-full mt-4 md:mt-8 px-5 md:px-20 pt-4 md:pt-8 pb-10 min-h-[40vh]">
-      <h2 className="text-3xl font-semibold mb-10">More Projects</h2>
+      <h2 className="text-3xl font-semibold mb-3">More Projects</h2>
+      <p className="text-white-50 text-sm mb-10">
+        Dynamically fetched via the GitHub API — no manual upkeep. Refreshed
+        weekly by CI, so new repos appear here automatically.
+      </p>
       {status === "loading" ? (
         <SkeletonGrid />
       ) : (
